@@ -151,8 +151,8 @@ def main():
 
                 plt.xlabel('Deformação [%]')
                 plt.ylabel('Tensão [MPa]')
-                x = DATASETS[i]['deformacao[%]']
-                y = DATASETS[i]['tensao[MPa]']
+                x = DATASETS[i]['deformacao[%]'].tolist()
+                y = DATASETS[i]['tensao[MPa]'].tolist()
 
                 artist = ax.plot(x, y, label='Amostra ' + str(i + 1))
                 CURVAS.append(artist)
@@ -176,8 +176,8 @@ def main():
             plt.ylabel('Tensão [MPa]')
 
             for i in range(len(DATASETS)):
-                x = DATASETS[i]['deformacao[%]']
-                y = DATASETS[i]['tensao[MPa]']
+                x = DATASETS[i]['deformacao[%]'].tolist()
+                y = DATASETS[i]['tensao[MPa]'].tolist()
 
                 artist = ax.plot(x, y, label= nome_do_arquivo.split('-')[1])
                 CURVAS.append(artist)
