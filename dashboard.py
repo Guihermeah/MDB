@@ -70,7 +70,7 @@ def main():
                     dataset['forca[kN]'] = dataset['forca[N]'] / 1000
                     dataset.reset_index(drop=True)
 
-                for arquivo_info in ARQUIVOS_info:
+                for arquivo_info in ARQUIVOS:
                     nome_do_arquivo = arquivo_info['nome']
                     # Now you can work with the "nome_do_arquivo" value
 
@@ -179,7 +179,7 @@ def main():
                 x = DATASETS[i]['deformacao[%]']
                 y = DATASETS[i]['tensao[MPa]']
 
-                artist = ax.plot(x, y, label= nome_do_arquivo  .split('-')[1])
+                artist = ax.plot(x, y, label= nome_do_arquivo.split('-')[1])
                 CURVAS.append(artist)
 
             box = ax.get_position()
