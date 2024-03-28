@@ -90,8 +90,8 @@ def main():
                 plt.xlabel('Deslocamento [mm]')
                 plt.ylabel('Força [kN]')
 
-                x = DATASETS[i]['deformacao[mm]']
-                y = DATASETS[i]['forca[N]']
+                x = DATASETS[i]['deformacao[mm]'].tolist()
+                y = DATASETS[i]['forca[N]'].tolist()
 
                 artist = ax.plot(x, y, label='Amostra ' + str(i + 1))
                 CURVAS.append(artist)
@@ -117,8 +117,8 @@ def main():
             plt.ylabel('Força [kN]')
 
             for i in range(len(DATASETS)):
-                x = DATASETS[i]['deformacao[mm]']
-                y = DATASETS[i]['forca[N]']
+                 x = DATASETS[i]['deformacao[mm]'].tolist()
+                y = DATASETS[i]['forca[N]'].tolist()
 
                 artist = ax.plot(x, y, label='Amostra ' + str(i + 1))
                 CURVAS.append(artist)
