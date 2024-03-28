@@ -120,8 +120,8 @@ def main():
                  x = DATASETS[i]['deformacao[mm]'].tolist()
                  y = DATASETS[i]['forca[N]'].tolist()
 
-                artist = ax.plot(x, y, label='Amostra ' + str(i + 1))
-                CURVAS.append(artist)
+                 artist = ax.plot(x, y, label='Amostra ' + str(i + 1))
+                 CURVAS.append(artist)
 
             box = ax.get_position()
             ax.set_position([box.x0, box.y0, box.width * 0.8, box.height])
