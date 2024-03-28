@@ -30,7 +30,7 @@ def main():
            ARQUIVOS_info = {'nome': (uploaded_file.name).split(".")[0],'conteudo': conteudo}
            ARQUIVOS.append(ARQUIVOS_info)
 
-        pasta_destino = '/content/csv/'
+        pasta_destino = 'csv'
         if not os.path.exists(pasta_destino):
             os.makedirs(pasta_destino)
         AREA = []  # Lista para armazenar áreas por amostra
